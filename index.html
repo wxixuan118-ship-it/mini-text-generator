@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Small Text Generator – Tiny Text, Small Caps & Subscript</title>
+  <meta name="description" content="Free small text generator: turn any text into tiny text, small caps, superscript and subscript letters. Copy and paste into Instagram, TikTok, Discord and more.">
+  <link rel="canonical" href="https://example.com/">
+  <meta property="og:title" content="Small Text Generator – Tiny Text, Small Caps & Subscript">
+  <meta property="og:description" content="Free small text generator: turn any text into tiny text, small caps, superscript and subscript letters. Copy and paste into Instagram, TikTok, Discord and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236366f1'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>ᵃᵃ</text></svg>">
+  <style>
+:root{--bg:#f6f7fb;--surface:#fff;--surface-2:#f1f2f8;--text:#14162b;--muted:#5f6478;--border:#e3e5ee;--primary:#6366f1;--primary-hover:#4f52d9;--primary-soft:#eef0ff;--success:#16a34a;--shadow:0 1px 2px rgba(20,22,43,.05),0 8px 24px rgba(20,22,43,.06);--radius:14px}
+[data-theme="dark"]{--bg:#0f1117;--surface:#171a23;--surface-2:#1f232e;--text:#eef0f6;--muted:#9aa0b4;--border:#2a2f3d;--primary:#818cf8;--primary-hover:#a5b0ff;--primary-soft:#23264a;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:background .2s,color .2s}
+a{color:var(--primary)}
+.container{max-width:960px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--surface) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;text-decoration:none;color:var(--text)}
+.logo-mark{width:32px;height:32px;border-radius:9px;background:var(--primary);color:#fff;display:grid;place-items:center;font-size:15px;font-weight:800}
+.nav-links{display:flex;gap:20px;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500}
+.nav-links a:hover,.nav-links a[aria-current]{color:var(--text)}
+.theme-btn{border:1px solid var(--border);background:var(--surface);color:var(--text);width:36px;height:36px;border-radius:10px;cursor:pointer;font-size:16px;display:grid;place-items:center}
+@media(max-width:640px){.nav-links a{display:none}}
+.hero{text-align:center;padding:56px 0 28px}
+.hero h1{font-size:clamp(30px,5vw,46px);line-height:1.15;margin:0 0 14px;letter-spacing:-.02em}
+.hero h1 span{color:var(--primary)}
+.hero p{color:var(--muted);font-size:17px;max-width:620px;margin:0 auto}
+.hero-img{display:block;max-width:100%;height:auto;margin:24px auto 0;border-radius:14px;box-shadow:var(--shadow)}
+.tool{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;margin-top:24px}
+textarea{width:100%;min-height:130px;resize:vertical;padding:16px;font:inherit;font-size:17px;border:1.5px solid var(--border);border-radius:12px;background:var(--surface-2);color:var(--text);outline:none;transition:border-color .15s}
+textarea:focus{border-color:var(--primary)}
+.input-meta{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-size:13px;color:var(--muted)}
+.input-actions{display:flex;gap:8px}
+.btn{border:1px solid var(--border);background:var(--surface);color:var(--text);padding:7px 13px;border-radius:9px;font:inherit;font-size:13px;font-weight:600;cursor:pointer;transition:background .15s,border-color .15s,color .15s;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{background:var(--surface-2)}
+.btn-primary{background:var(--primary);border-color:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-hover);border-color:var(--primary-hover)}
+.btn.copied{background:var(--success);border-color:var(--success);color:#fff}
+.results{display:grid;gap:12px;margin-top:22px}
+.result{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:14px 16px;border:1px solid var(--border);border-radius:12px;background:var(--surface-2);transition:border-color .15s}
+.result:hover{border-color:var(--primary)}
+.result-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:4px}
+.result-text{font-size:19px;word-break:break-word;white-space:pre-wrap;min-height:28px;line-height:1.5}
+.result-text.empty{color:var(--muted);opacity:.6}
+@media(max-width:520px){.result{grid-template-columns:1fr}.result .btn{justify-self:end}}
+section{padding:48px 0 0}
+section h2{font-size:26px;margin:0 0 12px;letter-spacing:-.01em}
+section p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.card h3{margin:0 0 6px;font-size:17px}.card h3 a{color:inherit;text-decoration:none}.card h3 a:hover{color:var(--primary)}
+.card p{margin:0;font-size:14.5px}.card .icon{font-size:26px;margin-bottom:10px}
+.card .more{display:inline-block;margin-top:10px;font-size:14px;font-weight:600;text-decoration:none}
+.steps{counter-reset:step;list-style:none;padding:0;margin:20px 0 0;display:grid;gap:12px}
+.steps li{position:relative;padding-left:48px;color:var(--muted)}
+.steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;background:var(--primary-soft);color:var(--primary);font-weight:700;display:grid;place-items:center}
+.steps li strong{color:var(--text)}
+.table-wrap{overflow-x:auto;margin-top:20px;border:1px solid var(--border);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);white-space:nowrap}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:var(--surface-2)}
+tr:last-child td{border-bottom:0}
+td.out{font-size:19px}
+td.none{color:var(--muted);font-style:italic}
+.faq{display:grid;gap:10px;margin-top:20px}
+details{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:0 18px}
+summary{cursor:pointer;padding:15px 0;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--muted);font-size:20px;font-weight:400;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0 0 16px;font-size:15px}
+.related{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.related a{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid var(--border);border-radius:999px;background:var(--surface);text-decoration:none;color:var(--text);font-weight:600;font-size:14px}
+.related a:hover{border-color:var(--primary);color:var(--primary)}
+footer{margin-top:64px;padding:28px 0;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:13.5px}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:center;margin-bottom:10px}
+footer nav a{color:var(--muted);text-decoration:none}footer nav a:hover{color:var(--text)}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:var(--text);color:var(--bg);padding:10px 18px;border-radius:999px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:50}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo"><span class="logo-mark">ᵃᵃ</span>Small Text Generator</a>
+      <nav class="nav-links">
+        <a href="#styles">Styles</a><a href="#how-to">How to use</a><a href="#faq">FAQ</a>
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <h1>Small Text Generator <span>ᵗⁱⁿʸ ᵗᵉˣᵗ</span></h1>
+      <p>This free small text generator turns anything you type into ꜱᴍᴀʟʟ ᴄᴀᴘꜱ, ˢᵘᵖᵉʳˢᶜʳⁱᵖᵗ or ₛᵤᵦₛ꜀ᵣᵢₚₜ letters instantly. Copy the result and paste it into Instagram, TikTok, Twitter/X, Discord, Facebook or anywhere else.</p>
+      <img class="hero-img" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20640%20120%27%3E%3Crect%20width%3D%27640%27%20height%3D%27120%27%20rx%3D%2718%27%20fill%3D%27%236366f1%27%2F%3E%3Ctext%20x%3D%2740%27%20y%3D%2772%27%20font-family%3D%27Arial%2CHelvetica%2Csans-serif%27%20font-size%3D%2730%27%20fill%3D%27white%27%20opacity%3D%27.85%27%3ESmall%20text%3C%2Ftext%3E%3Ctext%20x%3D%27245%27%20y%3D%2772%27%20font-family%3D%27Arial%2CHelvetica%2Csans-serif%27%20font-size%3D%2734%27%20fill%3D%27white%27%3E%E2%86%92%3C%2Ftext%3E%3Ctext%20x%3D%27300%27%20y%3D%2772%27%20font-family%3D%27Arial%2CHelvetica%2Csans-serif%27%20font-size%3D%2730%27%20fill%3D%27white%27%20font-weight%3D%27bold%27%3E%EA%9C%B1%E1%B4%8D%E1%B4%80%CA%9F%CA%9F%20%E1%B4%9B%E1%B4%87x%E1%B4%9B%20%C2%B7%20%E1%B5%97%E2%81%B1%E2%81%BF%CA%B8%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Small text generator example: normal text converted into small caps and tiny superscript letters" width="640" height="120" loading="lazy" decoding="async">
+    </div>
+
+    <div class="tool" id="tool">
+      <label for="input" class="result-label">Your text</label>
+      <textarea id="input" placeholder="Type or paste your text here..." autofocus spellcheck="false"></textarea>
+      <div class="input-meta">
+        <span id="count">0 characters</span>
+        <div class="input-actions">
+          <button class="btn" id="pasteBtn">📋 Paste</button>
+          <button class="btn" id="clearBtn">✕ Clear</button>
+        </div>
+      </div>
+      <div class="results" id="results" data-styles="smallcaps,superscript,subscript,strike,underline,tinystrike" data-placeholder="Small Text Generator"></div>
+    </div>
+
+    <section id="styles"><h2>Small text styles you can generate</h2><p>The tool replaces each letter with a miniature Unicode look-alike. Every style below uses real Unicode characters, not a font. That means the tiny letters keep their look wherever you paste them, even in places that don't allow formatting.</p><div class="grid"><div class="card"><div class="icon">ᴀʙᴄ</div><h3>Small Caps Generator</h3><p>Miniature uppercase letters (ꜱᴍᴀʟʟ ᴄᴀᴘꜱ). Perfect for stylish usernames, bios and headings.</p></div><div class="card"><div class="icon">ᵃᵇᶜ</div><h3>Superscript Generator</h3><p>Letters raised above the baseline (ᵗⁱⁿʸ ᵗᵉˣᵗ). The classic “tiny text” look used across social media.</p></div><div class="card"><div class="icon">ₐᵦ꜀</div><h3>Subscript Generator</h3><p>Letters sitting below the baseline (ₛᵤᵦₛ꜀ᵣᵢₚₜ). Great for chemistry, math notes and subtle captions.</p></div><div class="card"><div class="icon">s̶m̶a̶l̶l̶</div><h3>Decorated variants</h3><p>Combine small caps or tiny text with strikethrough or underline for extra flair without any extra apps.</p></div></div></section><section id="how-to"><h2>How to use the small text generator</h2><ol class="steps"><li><strong>Type or paste your text</strong> into the box at the top of the page.</li><li><strong>Watch it convert instantly</strong> into every small text style at once.</li><li><strong>Click “Copy”</strong> next to the style you like best.</li><li><strong>Paste it anywhere</strong> — social media bios, comments, chat apps, usernames, game names and more.</li></ol></section><section id="use-cases"><h2>Where to use small text</h2><div class="grid"><div class="card"><div class="icon">📸</div><h3>Instagram &amp; TikTok</h3><p>Make your bio, captions and comments stand out with small letters.</p></div><div class="card"><div class="icon">🐦</div><h3>Twitter / X &amp; Threads</h3><p>Fit more style into limited characters and add emphasis to posts.</p></div><div class="card"><div class="icon">🎮</div><h3>Discord, Steam &amp; Games</h3><p>Create unique nicknames, server names and status messages.</p></div><div class="card"><div class="icon">✉️</div><h3>Messages &amp; Notes</h3><p>Add superscript and subscript to notes, emails and study material.</p></div></div></section>
+
+    <section id="faq"><h2>Small text FAQ</h2><div class="faq">
+<details open><summary>How does the small text generator work?</summary><p>It maps each normal letter to a look-alike character from the <a href="https://www.unicode.org/charts/" target="_blank" rel="noopener">Unicode</a> standard — the same character set your device already uses for emoji and symbols. Small caps come from the Phonetic Extensions block, while superscript and subscript letters come from the Superscripts and Subscripts block. Because they are real characters, you can copy and paste them anywhere plain text is accepted.</p></details>
+<details><summary>Why are some letters not converted?</summary><p>Unicode doesn't include a small version of every letter. Subscript in particular is missing several letters (like d, f, g, q, w, y and z), so those are left in their normal form. Superscript and small caps cover the full alphabet.</p></details>
+<details><summary>Will the tiny text show up correctly on every device?</summary><p>Almost always. Modern phones, computers and browsers ship with fonts that support these characters. On very old systems a few letters might appear as boxes, but that is increasingly rare.</p></details>
+<details><summary>Is this small text a font?</summary><p>No. Fonts change how existing letters look, but they don't survive copy-paste. This tool changes the letters themselves into different Unicode characters, so the small style stays wherever you paste it.</p></details>
+<details><summary>Can I use small text in usernames and display names?</summary><p>Usually, yes. Instagram, TikTok, Discord, Twitch and most games accept Unicode characters in display names and bios, so small caps or tiny text pasted from this tool will show up correctly. A few platforms restrict usernames (not display names) to plain letters and numbers — if a site rejects the text, try it in the display name or bio field instead.</p></details>
+<details><summary>Does it work with numbers, emojis and other languages?</summary><p>Numbers convert cleanly in superscript and subscript (¹²³ and ₁₂₃). Emojis, punctuation and non-Latin scripts such as Chinese, Japanese, Arabic or Cyrillic have no small Unicode equivalents, so they pass through unchanged. You can still mix them with small text — for example ꜱᴍᴀʟʟ ᴛᴇxᴛ ✨ — and the result copies as a single string.</p></details>
+<details><summary>Is the small text generator free?</summary><p>Yes — it's completely free, works in your browser, and nothing you type is sent to a server.</p></details>
+</div></section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Small Text Generator · Free tiny text, small caps, superscript &amp; subscript converter.
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+  <script>
+// Character maps are generated by the build script — edit build.py, not this file.
+const SMALL_CAPS = {"a": "ᴀ", "b": "ʙ", "c": "ᴄ", "d": "ᴅ", "e": "ᴇ", "f": "ꜰ", "g": "ɢ", "h": "ʜ", "i": "ɪ", "j": "ᴊ", "k": "ᴋ", "l": "ʟ", "m": "ᴍ", "n": "ɴ", "o": "ᴏ", "p": "ᴘ", "q": "ǫ", "r": "ʀ", "s": "ꜱ", "t": "ᴛ", "u": "ᴜ", "v": "ᴠ", "w": "ᴡ", "x": "x", "y": "ʏ", "z": "ᴢ"};
+const SUPERSCRIPT = {"a": "ᵃ", "b": "ᵇ", "c": "ᶜ", "d": "ᵈ", "e": "ᵉ", "f": "ᶠ", "g": "ᵍ", "h": "ʰ", "i": "ⁱ", "j": "ʲ", "k": "ᵏ", "l": "ˡ", "m": "ᵐ", "n": "ⁿ", "o": "ᵒ", "p": "ᵖ", "q": "ᑫ", "r": "ʳ", "s": "ˢ", "t": "ᵗ", "u": "ᵘ", "v": "ᵛ", "w": "ʷ", "x": "ˣ", "y": "ʸ", "z": "ᶻ", "A": "ᴬ", "B": "ᴮ", "C": "ᶜ", "D": "ᴰ", "E": "ᴱ", "F": "ᶠ", "G": "ᴳ", "H": "ᴴ", "I": "ᴵ", "J": "ᴶ", "K": "ᴷ", "L": "ᴸ", "M": "ᴹ", "N": "ᴺ", "O": "ᴼ", "P": "ᴾ", "Q": "Q", "R": "ᴿ", "S": "ˢ", "T": "ᵀ", "U": "ᵁ", "V": "ⱽ", "W": "ᵂ", "X": "ˣ", "Y": "ʸ", "Z": "ᶻ", "0": "⁰", "1": "¹", "2": "²", "3": "³", "4": "⁴", "5": "⁵", "6": "⁶", "7": "⁷", "8": "⁸", "9": "⁹", "+": "⁺", "-": "⁻", "=": "⁼", "(": "⁽", ")": "⁾"};
+const SUBSCRIPT = {"a": "ₐ", "b": "ᵦ", "c": "꜀", "e": "ₑ", "h": "ₕ", "i": "ᵢ", "j": "ⱼ", "k": "ₖ", "l": "ₗ", "m": "ₘ", "n": "ₙ", "o": "ₒ", "p": "ₚ", "r": "ᵣ", "s": "ₛ", "t": "ₜ", "u": "ᵤ", "v": "ᵥ", "x": "ₓ", "0": "₀", "1": "₁", "2": "₂", "3": "₃", "4": "₄", "5": "₅", "6": "₆", "7": "₇", "8": "₈", "9": "₉", "+": "₊", "-": "₋", "=": "₌", "(": "₍", ")": "₎"};
+
+const convert = (text, map, lowerFirst = false) =>
+  Array.from(text).map(ch => {
+    const key = lowerFirst ? ch.toLowerCase() : ch;
+    return map[key] ?? map[ch.toLowerCase()] ?? ch;
+  }).join('');
+const decorate = (text, mark) =>
+  Array.from(text).map(ch => (ch === ' ' || ch === '\n') ? ch : ch + mark).join('');
+
+const STYLES = {
+  smallcaps:   { label: 'Small Caps',               fn: t => convert(t, SMALL_CAPS, true) },
+  superscript: { label: 'Superscript (Tiny Text)',  fn: t => convert(t, SUPERSCRIPT) },
+  subscript:   { label: 'Subscript',                fn: t => convert(t, SUBSCRIPT, true) },
+  strike:      { label: 'Small Caps Strikethrough', fn: t => decorate(convert(t, SMALL_CAPS, true), '̶') },
+  underline:   { label: 'Small Caps Underline',     fn: t => decorate(convert(t, SMALL_CAPS, true), '̲') },
+  tinystrike:  { label: 'Tiny Text Strikethrough',  fn: t => decorate(convert(t, SUPERSCRIPT), '̶') },
+  tinyunder:   { label: 'Tiny Text Underline',      fn: t => decorate(convert(t, SUPERSCRIPT), '̲') },
+  substrike:   { label: 'Subscript Strikethrough',  fn: t => decorate(convert(t, SUBSCRIPT, true), '̶') },
+};
+
+const input = document.getElementById('input');
+const results = document.getElementById('results');
+const count = document.getElementById('count');
+const toast = document.getElementById('toast');
+const PLACEHOLDER = results.dataset.placeholder || 'Small Text Generator';
+const active = (results.dataset.styles || Object.keys(STYLES).join(',')).split(',').map(s => s.trim()).filter(s => STYLES[s]);
+
+results.innerHTML = active.map(id => `
+  <div class="result">
+    <div>
+      <div class="result-label">${STYLES[id].label}</div>
+      <div class="result-text" id="out-${id}"></div>
+    </div>
+    <button class="btn btn-primary" data-style="${id}">Copy</button>
+  </div>`).join('');
+
+function render() {
+  const text = input.value;
+  const isEmpty = text.length === 0;
+  count.textContent = `${Array.from(text).length} characters`;
+  active.forEach(id => {
+    const el = document.getElementById('out-' + id);
+    el.textContent = STYLES[id].fn(isEmpty ? PLACEHOLDER : text);
+    el.classList.toggle('empty', isEmpty);
+  });
+}
+input.addEventListener('input', render);
+render();
+
+results.addEventListener('click', async e => {
+  const btn = e.target.closest('button[data-style]');
+  if (!btn) return;
+  const value = STYLES[btn.dataset.style].fn(input.value || PLACEHOLDER);
+  try { await navigator.clipboard.writeText(value); }
+  catch {
+    const ta = document.createElement('textarea');
+    ta.value = value; document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); ta.remove();
+  }
+  btn.textContent = '✓ Copied'; btn.classList.add('copied'); toast.classList.add('show');
+  setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1500);
+  setTimeout(() => toast.classList.remove('show'), 1500);
+});
+
+document.getElementById('clearBtn').addEventListener('click', () => { input.value = ''; render(); input.focus(); });
+document.getElementById('pasteBtn').addEventListener('click', async () => {
+  try { input.value = await navigator.clipboard.readText(); render(); } catch { input.focus(); }
+});
+
+const themeBtn = document.getElementById('themeBtn');
+const applyTheme = t => { document.documentElement.setAttribute('data-theme', t); themeBtn.textContent = t === 'dark' ? '☀️' : '🌙'; };
+let saved = null; try { saved = localStorage.getItem('theme'); } catch {}
+applyTheme(saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+themeBtn.addEventListener('click', () => {
+  const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  applyTheme(next); try { localStorage.setItem('theme', next); } catch {}
+});
+document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Small Text Generator",
+      "url": "https://example.com/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "description": "Free online tool that converts normal text into tiny text, small caps, superscript and subscript Unicode characters.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does the small text generator work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It maps each normal letter to a look-alike character from the Unicode standard — the same character set your device already uses for emoji and symbols. Small caps come from the Phonetic Extensions block, while superscript and subscript letters come from the Superscripts and Subscripts block. Because they are real characters, you can copy and paste them anywhere plain text is accepted."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are some letters not converted?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Unicode doesn't include a small version of every letter. Subscript in particular is missing several letters (like d, f, g, q, w, y and z), so those are left in their normal form. Superscript and small caps cover the full alphabet — see the character tables on the small caps and subscript pages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will the tiny text show up correctly on every device?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Almost always. Modern phones, computers and browsers ship with fonts that support these characters. On very old systems a few letters might appear as boxes, but that is increasingly rare."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this small text a font?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Fonts change how existing letters look, but they don't survive copy-paste. This tool changes the letters themselves into different Unicode characters, so the small style stays wherever you paste it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use small text in usernames and display names?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually, yes. Instagram, TikTok, Discord, Twitch and most games accept Unicode characters in display names and bios, so small caps or tiny text pasted from this tool will show up correctly. A few platforms restrict usernames (not display names) to plain letters and numbers — if a site rejects the text, try it in the display name or bio field instead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work with numbers, emojis and other languages?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Numbers convert cleanly in superscript and subscript (¹²³ and ₁₂₃). Emojis, punctuation and non-Latin scripts such as Chinese, Japanese, Arabic or Cyrillic have no small Unicode equivalents, so they pass through unchanged. You can still mix them with small text — for example ꜱᴍᴀʟʟ ᴛᴇxᴛ ✨ — and the result copies as a single string."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the small text generator free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — it's completely free, works in your browser, and nothing you type is sent to a server."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+</body>
+</html>
