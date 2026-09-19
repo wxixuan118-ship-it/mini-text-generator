@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscript Generator – Small Lowered Text to Copy &amp; Paste</title>
+  <meta name="description" content="Free subscript generator: turn letters, numbers and symbols into Unicode subscript text (H₂O, CO₂, ₛₘₐₗₗ ₜₑₓₜ) to copy and paste into chats, notes and bios.">
+  <link rel="canonical" href="https://minitextgenerator.com/subscript-generator/">
+  <meta property="og:title" content="Subscript Generator – Small Lowered Text to Copy &amp; Paste">
+  <meta property="og:description" content="Free subscript generator: turn letters, numbers and symbols into Unicode subscript text (H₂O, CO₂, ₛₘₐₗₗ ₜₑₓₜ) to copy and paste into chats, notes and bios.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://minitextgenerator.com/subscript-generator/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236366f1'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>ᵃᵃ</text></svg>">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="/" class="logo"><span class="logo-mark">ᵃᵃ</span>Small Text Generator</a>
+      <nav class="nav-links">
+        <a href="/superscript-generator/">Superscript</a><a href="/subscript-generator/" aria-current="page">Subscript</a><a href="#how-to">How to use</a><a href="#faq">FAQ</a>
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <h1>Subscript Generator <span>ₛₘₐₗₗ ₗₒwₑᵣₑd ₜₑₓₜ</span></h1>
+      <p>This free subscript generator turns letters, numbers and symbols into Unicode subscript text that sits below the baseline — H₂O, CO₂, C₆H₁₂O₆ or ₗᵢₖₑ ₜₕᵢₛ. The subscript is plain text, not formatting, so it pastes cleanly into chats, notes, spreadsheets, social media bios and any field without a subscript button.</p>
+      <img class="hero-img" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20640%20120%27%3E%3Crect%20width%3D%27640%27%20height%3D%27120%27%20rx%3D%2718%27%20fill%3D%27%236366f1%27%2F%3E%3Ctext%20x%3D%2740%27%20y%3D%2772%27%20font-family%3D%27Arial%2CHelvetica%2Csans-serif%27%20font-size%3D%2730%27%20fill%3D%27white%27%20opacity%3D%27.85%27%3ESubscript%3C%2Ftext%3E%3Ctext%20x%3D%27210%27%20y%3D%2772%27%20font-family%3D%27Arial%2CHelvetica%2Csans-serif%27%20font-size%3D%2734%27%20fill%3D%27white%27%3E%E2%86%92%3C%2Ftext%3E%3Ctext%20x%3D%27265%27%20y%3D%2772%27%20font-family%3D%27Arial%2CHelvetica%2Csans-serif%27%20font-size%3D%2732%27%20fill%3D%27white%27%20font-weight%3D%27bold%27%3E%E2%82%9B%E1%B5%A4%E1%B5%A6%E2%82%9B%EA%9C%80%E1%B5%A3%E1%B5%A2%E2%82%9A%E2%82%9C%20%C2%B7%20H%E2%82%82O%20%C2%B7%20CO%E2%82%82%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Subscript generator example: the word subscript converted into lowered Unicode letters next to H2O and CO2 formulas" width="640" height="120" loading="lazy" decoding="async">
+    </div>
+
+    <div class="tool" id="tool">
+      <label for="input" class="result-label">Your text</label>
+      <textarea id="input" placeholder="Type or paste your text here..." autofocus spellcheck="false"></textarea>
+      <div class="input-meta">
+        <span id="count">0 characters</span>
+        <div class="input-actions">
+          <button class="btn" id="pasteBtn">📋 Paste</button>
+          <button class="btn" id="clearBtn">✕ Clear</button>
+        </div>
+      </div>
+      <div class="results" id="results" data-styles="subscript,substrike,subunder" data-placeholder="Subscript Generator H2O CO2"></div>
+    </div>
+
+    <section id="characters"><h2>Subscript characters this generator produces</h2><p>Unicode's <a href="https://www.unicode.org/charts/PDF/U2070.pdf" target="_blank" rel="noopener">Superscripts and Subscripts</a> block defines every subscript digit and the common math signs, but only a partial alphabet. The subscript generator uses those official characters first and fills a couple of gaps with look-alike glyphs from the Phonetic Extensions block. The table shows exactly which characters convert and which stay as normal letters.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Input</th><th scope="col">Subscript output</th></tr></thead>
+<tbody>
+<tr><td>a b c e h i j k l m</td><td class="out">ₐ ᵦ ꜀ ₑ ₕ ᵢ ⱼ ₖ ₗ ₘ</td></tr>
+<tr><td>n o p r s t u v x</td><td class="out">ₙ ₒ ₚ ᵣ ₛ ₜ ᵤ ᵥ ₓ</td></tr>
+<tr><td>d f g q w y z</td><td class="none">no subscript form — left unchanged</td></tr>
+<tr><td>0 1 2 3 4 5 6 7 8 9</td><td class="out">₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉</td></tr>
+<tr><td>+ − = ( )</td><td class="out">₊ ₋ ₌ ₍ ₎</td></tr>
+</tbody></table></div>
+<p>Seven lowercase letters (d, f, g, q, w, y, z) and all uppercase letters have no subscript in Unicode, so they pass through unchanged rather than being replaced with something misleading. Letters b and c have no official subscript either; the tool substitutes ᵦ (a subscript beta) and ꜀ so short words still read correctly. Digits and math signs are fully covered, which is why chemical formulas and indices always convert perfectly.</p></section>
+
+    <section id="how-to"><h2>How to use the subscript generator</h2><ol class="steps"><li><strong>Type or paste your text</strong> into the box at the top of this page. You can mix normal and lowered text: type just the “2” in H2O, copy the result and place it after the H.</li><li><strong>Pick a style.</strong> Plain subscript is what most people need; the strikethrough and underline variants add a combining mark to every lowered character.</li><li><strong>Click “Copy”</strong> next to the result you want. The characters are copied as plain text.</li><li><strong>Paste anywhere</strong> — a chemistry note, a spreadsheet cell, a Discord message, a social media bio or a text field that has no formatting toolbar.</li></ol>
+<p>Tip: for a full formula such as C6H12O6, type only the digits (6 12 6) into the subscript generator, then assemble C₆H₁₂O₆ by pasting each lowered number in place.</p></section>
+
+    <section id="use-cases"><h2>Where to use subscript text</h2><div class="grid">
+<div class="card"><div class="icon">H₂O</div><h3>Subscript in chemical formulas</h3><p>Write H₂O, CO₂, NaCl, C₆H₁₂O₆ and SO₄²⁻ in plain-text messages, quiz apps and forum posts where a rich-text editor isn't available.</p></div>
+<div class="card"><div class="icon">xₙ</div><h3>Subscript indices in math</h3><p>Show sequence terms and variables like x₁, x₂, aₙ or vₘₐₓ in notes, code comments and messaging apps.</p></div>
+<div class="card"><div class="icon">ₜᵢₙy</div><h3>Small subscript text for social media</h3><p>Lowered letters give a subtle, understated look for Instagram captions, TikTok bios, Discord nicknames and Twitter/X posts.</p></div>
+<div class="card"><div class="icon">log₂</div><h3>Subscript bases and units</h3><p>Type log₂, log₁₀, pKₐ or t₁/₂ correctly in study notes and spreadsheets without changing the font.</p></div>
+</div></section>
+
+    <section id="faq"><h2>Subscript generator FAQ</h2><div class="faq">
+<details open><summary>How do I type subscript on a phone or keyboard?</summary><p>Standard keyboards have no subscript keys at all. The subscript generator solves this: type normally, copy the converted text and paste it. On a computer you can also insert single characters with Alt codes (Windows) or the Character Viewer (Mac), but converting a whole formula here is much faster.</p></details>
+<details><summary>Why aren't some letters converted to subscript?</summary><p>Unicode simply never defined subscript versions of d, f, g, q, w, y, z or any capital letter. Rather than invent misleading substitutes, the tool leaves those letters unchanged so your text stays readable. Every digit and math sign does convert.</p></details>
+<details><summary>Is subscript text a font?</summary><p>No. The output is made of real Unicode characters, not a font or rich-text formatting. That's why it survives copy and paste into places that strip formatting, such as usernames, plain-text emails and chat apps.</p></details>
+<details><summary>Will subscript characters display everywhere?</summary><p>Digits like ₂ and ₁₀ display correctly on virtually every modern device. A few of the lowered letters come from the Phonetic Extensions block, which very old fonts may lack — in that rare case you'd see a box instead of the letter.</p></details>
+<details><summary>Can I convert superscript or small caps too?</summary><p>Yes. Use the dedicated <a href="/superscript-generator/">superscript generator</a> for raised text (x², 10⁶), or the main <a href="/">small text generator</a> to get small caps, superscript and subscript output side by side.</p></details>
+<details><summary>Is the subscript generator free?</summary><p>Completely free, no sign-up, and the conversion runs in your browser — nothing you type is sent to a server.</p></details>
+</div></section>
+
+    <section id="related"><h2>More generators like subscript</h2><p>Subscript is one of three tiny-text styles this site offers. Each dedicated page shows its own character table so you know exactly which letters convert.</p><div class="related"><a href="/superscript-generator/">ᵃᵇᶜ Superscript Generator</a><a href="/#styles">ᴀʙᴄ Small Caps Generator</a><a href="/">ᵃᵃ Small Text Generator (all styles)</a></div></section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <nav><a href="/">Small Text Generator</a><a href="/superscript-generator/">Superscript Generator</a><a href="/subscript-generator/">Subscript Generator</a></nav>
+      © <span id="year"></span> Small Text Generator · Free superscript, subscript &amp; small caps converter.
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Subscript Generator",
+      "url": "https://minitextgenerator.com/subscript-generator/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "description": "Free online subscript generator that converts letters, numbers and symbols into Unicode subscript characters you can copy and paste anywhere.",
+      "isPartOf": { "@type": "WebSite", "name": "Small Text Generator", "url": "https://minitextgenerator.com/" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Small Text Generator", "item": "https://minitextgenerator.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Subscript Generator", "item": "https://minitextgenerator.com/subscript-generator/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How do I type subscript on a phone or keyboard?", "acceptedAnswer": { "@type": "Answer", "text": "Standard keyboards have no subscript keys at all. The subscript generator solves this: type normally, copy the converted text and paste it. On a computer you can also insert single characters with Alt codes (Windows) or the Character Viewer (Mac), but converting a whole formula here is much faster." } },
+        { "@type": "Question", "name": "Why aren't some letters converted to subscript?", "acceptedAnswer": { "@type": "Answer", "text": "Unicode simply never defined subscript versions of d, f, g, q, w, y, z or any capital letter. Rather than invent misleading substitutes, the tool leaves those letters unchanged so your text stays readable. Every digit and math sign does convert." } },
+        { "@type": "Question", "name": "Is subscript text a font?", "acceptedAnswer": { "@type": "Answer", "text": "No. The output is made of real Unicode characters, not a font or rich-text formatting. That's why it survives copy and paste into places that strip formatting, such as usernames, plain-text emails and chat apps." } },
+        { "@type": "Question", "name": "Will subscript characters display everywhere?", "acceptedAnswer": { "@type": "Answer", "text": "Digits like ₂ and ₁₀ display correctly on virtually every modern device. A few of the lowered letters come from the Phonetic Extensions block, which very old fonts may lack — in that rare case you'd see a box instead of the letter." } },
+        { "@type": "Question", "name": "Can I convert superscript or small caps too?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Use the dedicated superscript generator for raised text (x², 10⁶), or the main small text generator to get small caps, superscript and subscript output side by side." } },
+        { "@type": "Question", "name": "Is the subscript generator free?", "acceptedAnswer": { "@type": "Answer", "text": "Completely free, no sign-up, and the conversion runs in your browser — nothing you type is sent to a server." } }
+      ]
+    }
+  ]
+}</script>
+</body>
+</html>
