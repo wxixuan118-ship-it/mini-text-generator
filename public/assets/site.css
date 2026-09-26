@@ -292,7 +292,7 @@ footer nav a{color:var(--muted);text-decoration:none;font-weight:600}
 footer nav a:hover{color:var(--primary)}
 .badges{margin-top:14px;display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap}
 .badges a{display:inline-block;line-height:0}
-.badges img{max-width:175px;height:auto;opacity:.85;transition:opacity .2s ease}
+.badges img{max-width:200px;height:auto;opacity:.85;transition:opacity .2s ease}
 .badges img:hover{opacity:1}
 
 .toast{
