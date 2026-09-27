@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make Typing Text GIF Online – Free Animated Text Maker</title>
+  <meta name="description" content="Make a typing text GIF online for free. Customize text, speed, size, font and colors, preview the typing animation, then download your animated GIF instantly.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://minitextgenerator.com/make-typing-text-gif/">
+  <meta property="og:title" content="Make Typing Text GIF Online – Free Animated Text Maker">
+  <meta property="og:description" content="Create and download a custom typing text GIF in your browser. Choose the speed, dimensions, font and colors for free.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://minitextgenerator.com/make-typing-text-gif/">
+  <meta property="og:site_name" content="Small Text Generator">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232C6BFF'/%3E%3Ctext x='7' y='23' font-size='20' fill='white'%3E%E2%96%8C%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/typing-gif.js" defer></script>
+</head>
+<body class="typing-gif-page">
+  <header>
+    <div class="container nav">
+      <a href="/" class="logo"><span class="logo-mark" aria-hidden="true">GIF</span>Small Text Generator</a>
+      <a class="banner" href="#maker">⌨️ Make a typing text GIF — free, private, instant</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <div class="nav-dropdown"><button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">Usernames ▾</button><div class="nav-dropdown-menu"><a href="/tiktok-name-generator/">TikTok Name Generator</a></div></div>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">Symbols ▾</button>
+          <div class="nav-dropdown-menu"><a href="/cross-symbols-to-copy-and-paste/">Cross Symbols</a><a href="/bow-symbol-copy-and-paste/">Bow Symbols</a><a href="/fist-symbol-text-copy-and-paste/">Fist Symbols</a><a href="/flower-symbol-copy-and-paste/">Flower Symbols</a><a href="/cat-symbol-copy-and-paste/">Cat Symbols</a><a href="/moon-symbols-to-copy-and-paste/">Moon Symbols</a></div>
+        </div>
+        <div class="nav-dropdown active">
+          <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">Create ▾</button>
+          <div class="nav-dropdown-menu"><a href="/make-typing-text-gif/" aria-current="page">Typing Text GIF</a><a href="/superscript-generator/">Superscript</a><a href="/subscript-generator/">Subscript</a></div>
+        </div>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">Social ▾</button>
+          <div class="nav-dropdown-menu"><a href="/small-text-discord/">Discord</a></div>
+        </div>
+        <a href="#how-to">How to use</a><a href="#faq">FAQ</a>
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <h1>Make Typing Text GIF <span>H▌ He▌ Hel▌</span></h1>
+      <p>Make a typing text GIF online in seconds. Enter your message, customize the animation speed, canvas size, font and colors, then download a looping animated GIF — free and without uploading your text.</p>
+    </div>
+
+    <section class="tool gif-tool" id="maker" aria-labelledby="maker-title">
+      <div class="gif-controls">
+        <h2 id="maker-title">Typing text GIF maker</h2>
+        <div class="control">
+          <label for="gifText">Text to animate</label>
+          <textarea id="gifText" maxlength="60" spellcheck="true">Make typing text GIF</textarea>
+        </div>
+        <div class="control-grid">
+          <div class="control"><label for="gifSize">GIF size</label><select id="gifSize"><option value="600x300">600 × 300</option><option value="480x240">480 × 240</option><option value="800x400">800 × 400</option><option value="1080x540">1080 × 540</option></select></div>
+          <div class="control"><label for="gifSpeed">Typing speed</label><select id="gifSpeed"><option value="50">Fast — 50 ms</option><option value="100" selected>Normal — 100 ms</option><option value="180">Relaxed — 180 ms</option><option value="300">Slow — 300 ms</option></select></div>
+          <div class="control"><label for="gifFont">Font</label><select id="gifFont"><option value="Arial, sans-serif">Clean Sans</option><option value="Georgia, serif">Classic Serif</option><option value="'Courier New', monospace">Typewriter</option><option value="'Trebuchet MS', sans-serif">Rounded</option></select></div>
+          <div class="control"><label for="gifFontSize">Font size</label><select id="gifFontSize"><option value="32">Small — 32 px</option><option value="46" selected>Medium — 46 px</option><option value="64">Large — 64 px</option><option value="82">Extra large — 82 px</option></select></div>
+          <div class="control"><label for="gifTextColor">Text color</label><input id="gifTextColor" type="color" value="#ffffff"></div>
+          <div class="control"><label for="gifBgColor">Background color</label><input id="gifBgColor" type="color" value="#111827"></div>
+        </div>
+        <p class="privacy-note">🔒 Your text and GIF stay in your browser. Nothing is uploaded.</p>
+      </div>
+      <div class="gif-preview-wrap">
+        <div class="result-label">Live typing preview</div>
+        <canvas class="gif-preview" id="gifCanvas" width="600" height="300" role="img" aria-label="Live preview of the typing text animation">Typing animation preview</canvas>
+        <div class="gif-actions">
+          <button class="btn btn-primary" id="generateGif" type="button">✨ Create GIF</button>
+          <a class="btn gif-download" id="downloadGif" href="#" hidden>↓ Download GIF</a>
+        </div>
+        <p class="gif-status" id="gifStatus" role="status" aria-live="polite">Adjust the options, then create your animated GIF.</p>
+        <img class="gif-output" id="gifOutput" alt="Generated typing text GIF preview" width="600" height="300" hidden>
+      </div>
+    </section>
+
+    <section id="how-to">
+      <h2>How to make a typing text GIF</h2>
+      <ol class="steps">
+        <li><strong>Enter the text</strong> you want to animate. Keep it short for a punchy, lightweight GIF.</li>
+        <li><strong>Customize the look.</strong> Choose the GIF dimensions, typing speed, font size, font style, text color and background color.</li>
+        <li><strong>Check the live preview</strong> to see the typewriter effect loop before exporting.</li>
+        <li><strong>Select “Create GIF,”</strong> then use “Download GIF” to save the finished animation to your device.</li>
+      </ol>
+    </section>
+
+    <section id="features">
+      <h2>Create a typing animation for any message</h2>
+      <p>This typing text GIF maker renders each frame locally with HTML canvas and combines the frames into a standard looping GIF. The downloaded file works in presentations, websites, chat messages, email campaigns and social posts that support animated GIFs.</p>
+      <div class="grid">
+        <div class="card"><div class="icon">⌨️</div><h3>Typewriter animation</h3><p>Reveal your message one character at a time with a blinking cursor and a clean automatic loop.</p></div>
+        <div class="card"><div class="icon">🎨</div><h3>Custom colors and fonts</h3><p>Match a brand, mood or project with custom text and background colors plus four readable font styles.</p></div>
+        <div class="card"><div class="icon">⚡</div><h3>Four typing speeds</h3><p>Make text appear fast for energetic posts or slow the effect down for an intentional, cinematic reveal.</p></div>
+        <div class="card"><div class="icon">🔒</div><h3>Private browser processing</h3><p>The generator creates the GIF on your device. Your message is not sent to or stored on a server.</p></div>
+      </div>
+    </section>
+
+    <section id="tips">
+      <h2>Tips for a better typing text GIF</h2>
+      <p>Use a short headline or call to action so viewers can read the complete animation before it loops. High contrast — such as white text on a dark background — improves readability. A 600 × 300 GIF is a good all-purpose choice; smaller dimensions create a lighter file, while 1080 × 540 gives you more resolution for presentations and larger embeds.</p>
+      <p>Animated GIF does not support modern full-color pixels as efficiently as video, so flat backgrounds and simple text are ideal. If a platform has a strict upload limit, shorten the message, select a smaller canvas, or choose a faster typing speed to reduce the number of frames.</p>
+    </section>
+
+    <section id="faq">
+      <h2>Typing text GIF FAQ</h2>
+      <div class="faq">
+        <details open><summary>How do I make a typing text GIF?</summary><p>Enter your message in the tool, choose the size, speed, font and colors, and select Create GIF. When processing finishes, select Download GIF to save the animated file.</p></details>
+        <details><summary>Is this typing GIF maker free?</summary><p>Yes. The typing text GIF maker is free to use, has no watermark and requires no account or software installation.</p></details>
+        <details><summary>Does my text get uploaded?</summary><p>No. The canvas rendering and GIF encoding happen locally in your browser. Your text and generated frames are not uploaded to a server.</p></details>
+        <details><summary>Can I change the typing animation speed?</summary><p>Yes. Choose fast, normal, relaxed or slow typing. Faster settings shorten the animation and can produce a smaller GIF file.</p></details>
+        <details><summary>Where can I use the animated GIF?</summary><p>You can use the downloaded GIF in any service that accepts animated GIF files, including websites, slide decks, social posts, messaging apps and many email tools.</p></details>
+        <details><summary>Why is the generated GIF file large?</summary><p>GIF stores many image frames and uses a limited color palette. Choose a smaller canvas, shorter message or faster speed to reduce the file size.</p></details>
+      </div>
+    </section>
+
+    <section id="related"><h2>More free text tools</h2><p>Style the words before or after making your animation with these focused text generators.</p><div class="related"><a href="/">ᴀʙᴄ Small Text Generator</a><a href="/superscript-generator/">ᵃᵇᶜ Superscript Generator</a><a href="/subscript-generator/">ₐᵦ꜀ Subscript Generator</a><a href="/small-text-discord/">🎮 Small Text for Discord</a></div></section>
+  </main>
+
+  <footer><div class="container"><nav><a href="/">Small Text Generator</a><a href="/make-typing-text-gif/" aria-current="page">Make Typing Text GIF</a><a href="/superscript-generator/">Superscript Generator</a><a href="/subscript-generator/">Subscript Generator</a><a href="/small-text-discord/">Small Text for Discord</a><a href="/cross-symbols-to-copy-and-paste/">Copy &amp; Paste Symbols</a></nav>© <span id="year"></span> Small Text Generator · Free online typing text GIF maker.</div></footer>
+
+  <aside class="rail" aria-label="Text tools">
+    <a href="/"><span class="ico" aria-hidden="true">ᴀʙᴄ</span><span>Small Text<br>Generator</span></a>
+    <a href="/make-typing-text-gif/" aria-current="page"><span class="ico" aria-hidden="true">GIF</span><span>Typing Text<br>GIF Maker</span></a>
+    <a href="/superscript-generator/"><span class="ico" aria-hidden="true">ᵃᵇᶜ</span><span>Superscript<br>Generator</span></a>
+    <a href="/subscript-generator/"><span class="ico" aria-hidden="true">ₐᵦ꜀</span><span>Subscript<br>Generator</span></a>
+    <a href="/small-text-discord/"><span class="ico" aria-hidden="true">🎮</span><span>Small Text<br>for Discord</span></a>
+  </aside>
+
+  <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@graph":[
+      {"@type":"WebApplication","name":"Make Typing Text GIF","url":"https://minitextgenerator.com/make-typing-text-gif/","description":"Free browser-based tool to make a typing text GIF with custom text, speed, dimensions, font and colors.","applicationCategory":"MultimediaApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript and HTML canvas support","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isPartOf":{"@type":"WebSite","name":"Small Text Generator","url":"https://minitextgenerator.com/"}},
+      {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Small Text Generator","item":"https://minitextgenerator.com/"},{"@type":"ListItem","position":2,"name":"Make Typing Text GIF","item":"https://minitextgenerator.com/make-typing-text-gif/"}]},
+      {"@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":"How do I make a typing text GIF?","acceptedAnswer":{"@type":"Answer","text":"Enter your message, choose the size, speed, font and colors, select Create GIF, and then select Download GIF."}},
+        {"@type":"Question","name":"Is this typing GIF maker free?","acceptedAnswer":{"@type":"Answer","text":"Yes. It is free to use, has no watermark and requires no account or software installation."}},
+        {"@type":"Question","name":"Does my text get uploaded?","acceptedAnswer":{"@type":"Answer","text":"No. Canvas rendering and GIF encoding happen locally in your browser."}},
+        {"@type":"Question","name":"Can I change the typing animation speed?","acceptedAnswer":{"@type":"Answer","text":"Yes. Choose fast, normal, relaxed or slow typing."}},
+        {"@type":"Question","name":"Where can I use the animated GIF?","acceptedAnswer":{"@type":"Answer","text":"Use it in services that accept animated GIF files, including websites, slide decks, social posts, messaging apps and many email tools."}},
+        {"@type":"Question","name":"Why is the generated GIF file large?","acceptedAnswer":{"@type":"Answer","text":"GIF stores many image frames. Choose a smaller canvas, shorter message or faster speed to reduce file size."}}
+      ]}
+    ]
+  }</script>
+</body>
+</html>

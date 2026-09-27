@@ -1,0 +1,10 @@
+.name-form{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px;align-items:end}
+.name-form .control label{color:var(--text)}
+.name-options{grid-column:1/-1;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.name-results{grid-template-columns:repeat(2,minmax(0,1fr))}
+.name-results .result-text{font-size:16px;overflow-wrap:anywhere}
+.name-results .result{min-width:0}
+.name-status{color:var(--muted);font-size:14px}
+.name-page .hero h1 span{color:#1b54e4}
+[data-theme="dark"] .name-page .hero h1 span{color:#8db0ff}
+@media(max-width:640px){.name-form,.name-results{grid-template-columns:1fr}.nav{height:auto;min-height:66px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}.nav-links .nav-dropdown-menu a{display:block}.nav-links{flex-wrap:wrap}.logo{font-size:16px}}
