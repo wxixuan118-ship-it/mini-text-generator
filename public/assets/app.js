@@ -10,6 +10,9 @@ const convert = (text, map, lowerFirst = false) =>
   }).join('');
 const decorate = (text, mark) =>
   Array.from(text).map(ch => (ch === ' ' || ch === '\n') ? ch : ch + mark).join('');
+// Continuous variant marks spaces too, so the line never breaks between words.
+const decorateAll = (text, mark) =>
+  Array.from(text).map(ch => ch === '\n' ? ch : ch + mark).join('');
 
 const STYLES = {
   smallcaps:   { label: 'Small Caps',               fn: t => convert(t, SMALL_CAPS, true) },
@@ -21,6 +24,13 @@ const STYLES = {
   tinyunder:   { label: 'Tiny Text Underline',      fn: t => decorate(convert(t, SUPERSCRIPT), '̲') },
   substrike:   { label: 'Subscript Strikethrough',  fn: t => decorate(convert(t, SUBSCRIPT, true), '̶') },
   subunder:    { label: 'Subscript Underline',      fn: t => decorate(convert(t, SUBSCRIPT, true), '̲') },
+  uline:       { label: 'Underline',                 fn: t => decorate(t, '̲') },
+  ulineCont:   { label: 'Continuous Underline',      fn: t => decorateAll(t, '̲') },
+  ulineDouble: { label: 'Double Underline',          fn: t => decorate(t, '̳') },
+  ulineWavy:   { label: 'Wavy Underline',            fn: t => decorate(t, '̰') },
+  ulineDotted: { label: 'Dotted Underline',          fn: t => decorate(t, '̣') },
+  ulineLow:    { label: 'Low Line (thin)',           fn: t => decorate(t, '̱') },
+  ulineStrike: { label: 'Underline + Strikethrough', fn: t => decorate(t, '̶̲') },
 };
 
 const input = document.getElementById('input');
