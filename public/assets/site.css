@@ -374,3 +374,12 @@ footer nav a:hover{color:var(--primary)}
 .fx-out{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:14px 16px;border:2px solid var(--border);border-radius:16px;background:var(--surface-2)}
 .fx-out code{display:block;background:none;color:var(--text);font-weight:400;padding:0;white-space:pre-wrap;word-break:break-all;max-height:88px;overflow-y:auto;font-size:12.5px}
 @media(max-width:520px){.fx-out{grid-template-columns:1fr}.fx-out .btn{justify-self:end}}
+
+/* ── invisible character tool ──────────────────────────────── */
+.inv-box{display:inline-block;min-width:60px;margin:2px 0 6px;padding:6px 10px;border:2px dashed var(--border);border-radius:10px;background:var(--surface);font-size:18px;line-height:1.4}
+.inv-run{white-space:pre}
+.inv-note{margin:0;font-size:13.5px;color:var(--muted)}
+
+/* ── animated text tool ───────────────────────────────────── */
+.anim-stage{margin-top:18px;padding:30px 18px;border:2px solid var(--border);border-radius:18px;background:var(--surface-2);font-size:clamp(24px,5vw,40px);font-weight:700;text-align:center;overflow:hidden}
+@media (prefers-reduced-motion: reduce){.anim-stage .anim-text,.anim-stage .anim-text span{animation:none!important}}
