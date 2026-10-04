@@ -154,12 +154,33 @@ header{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 8
 @media(max-width:940px){.nav-links a[href^="#"]{display:none}}
 @media(max-width:780px){.logo{font-size:16px}.nav-links a{padding:7px 9px;font-size:13px}}
 @media(max-width:640px){.nav-links a{display:none}.logo{font-size:17px}.logo-mark{width:34px;height:34px;padding:7px}}
+/* first link in each dropdown is the category hub */
+.nav-dropdown-menu a.hub{color:var(--primary);font-weight:800;margin-bottom:4px;border-bottom:1.5px solid var(--border);border-radius:10px 10px 4px 4px}
+@media(max-width:640px){
+  .nav-links a.nav-top{display:inline-block}
+  /* the dropdown row wraps under the logo, and menus open full-width beneath it
+     instead of hanging off the right edge and widening the page */
+  .nav-links{flex:1 1 100%;flex-wrap:wrap;position:relative}
+  .nav-dropdown{position:static}
+  .nav-dropdown-menu{left:0;right:0;min-width:0}
+  .theme-btn{margin-left:auto}
+}
 
 /* ── main ─────────────────────────────────────────────────── */
 @media(max-width:640px){.nav{height:auto;min-height:66px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}.nav-links{flex-wrap:wrap}.nav-links .nav-dropdown-menu a{display:block}}
 main{position:relative;z-index:1}
 
+/* ── breadcrumb ───────────────────────────────────────────── */
+.breadcrumb{padding-top:22px;font-size:13px;font-weight:600;color:var(--muted)}
+.breadcrumb ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;row-gap:4px}
+.breadcrumb li{display:inline-flex;align-items:center}
+.breadcrumb li+li::before{content:"›";margin:0 9px;opacity:.6}
+.breadcrumb a{color:var(--muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--primary)}
+.breadcrumb [aria-current]{color:var(--text)}
+
 .hero{text-align:center;padding:62px 0 26px}
+.breadcrumb+.hero{padding-top:34px}
 .hero h1{
   font-size:clamp(32px,5.6vw,54px);line-height:1.1;margin:0 0 16px;
   font-weight:900;letter-spacing:-.035em;
@@ -292,6 +313,11 @@ footer{margin-top:72px;padding:30px 0;border-top:1px solid var(--border);text-al
 footer nav{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;margin-bottom:12px}
 footer nav a{color:var(--muted);text-decoration:none;font-weight:600}
 footer nav a:hover{color:var(--primary)}
+/* footer site map: one column per category, hub link on top */
+.foot-nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:22px 28px;justify-content:normal;max-width:1040px;margin:0 auto 26px;text-align:left}
+.foot-col{display:flex;flex-direction:column;gap:7px}
+.foot-hub{color:var(--text);font-weight:800;margin-bottom:2px}
+footer nav a[aria-current]{color:var(--text)}
 .badges{margin-top:14px;display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:nowrap;overflow:hidden}
 .badges a{display:inline-block;line-height:0;flex-shrink:0}
 .badges img{max-height:28px;width:auto;height:auto;opacity:.75;transition:opacity .2s ease}
@@ -383,3 +409,24 @@ footer nav a:hover{color:var(--primary)}
 /* ── animated text tool ───────────────────────────────────── */
 .anim-stage{margin-top:18px;padding:30px 18px;border:2px solid var(--border);border-radius:18px;background:var(--surface-2);font-size:clamp(24px,5vw,40px);font-weight:700;text-align:center;overflow:hidden}
 @media (prefers-reduced-motion: reduce){.anim-stage .anim-text,.anim-stage .anim-text span{animation:none!important}}
+
+/* ── text effects hub (one input, four previews) ──────────── */
+.fxh-input{width:100%;padding:14px 16px;font:inherit;font-size:17px;border:2px solid var(--border);border-radius:16px;background:var(--surface-2);color:var(--text);outline:none;transition:border-color .15s,box-shadow .15s}
+.fxh-input:focus{border-color:var(--primary);box-shadow:0 0 0 4px var(--primary-soft)}
+.fxh-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:18px}
+.fxh-card{display:flex;flex-direction:column;gap:10px;padding:16px;border:2px solid var(--border);border-radius:18px;background:var(--surface-2)}
+.fxh-card h3{margin:0;font-size:16px;font-weight:800}
+.fxh-card h3 a{color:inherit;text-decoration:none}
+.fxh-card h3 a:hover{color:var(--primary)}
+.fxh-card p{margin:0;font-size:14px;color:var(--muted)}
+.fxh-card .more{margin-top:auto;font-size:14px;font-weight:700;text-decoration:none}
+.fxh-stage{min-height:86px;display:grid;place-items:center;padding:12px;border:1.5px solid var(--border);border-radius:14px;background:var(--surface);font-size:clamp(22px,4vw,30px);font-weight:800;line-height:1.25;text-align:center;overflow:hidden;overflow-wrap:anywhere}
+.fxh-stage.dark{background:#111827;border-color:#111827;color:#fff}
+.fxh-rainbow{background:linear-gradient(90deg,#e81416,#ffa500,#faeb36,#79c314,#487de7,#4b369d,#70369d);-webkit-background-clip:text;background-clip:text;color:transparent}
+.fxh-fire{background:linear-gradient(180deg,#fff3b0,#ffd000 30%,#ff9a00 55%,#ff5400 78%,#e62400);-webkit-background-clip:text;background-clip:text;color:transparent}
+.fxh-wave span{display:inline-block;animation:fxh-wave 1.4s ease-in-out infinite}
+@keyframes fxh-wave{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-.3em)}}
+.fxh-type{display:inline-block;max-width:100%;overflow:hidden;white-space:nowrap;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.8em;border-right:.08em solid currentColor;width:0;animation:fxh-type 3s steps(var(--n,11)) infinite alternate,fxh-caret .7s step-end infinite}
+@keyframes fxh-type{to{width:calc(var(--n,11) * 1ch)}}
+@keyframes fxh-caret{50%{border-color:transparent}}
+@media (prefers-reduced-motion: reduce){.fxh-wave span,.fxh-type{animation:none}.fxh-type{width:auto;border-right:0}}
